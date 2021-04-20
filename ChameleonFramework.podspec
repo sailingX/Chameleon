@@ -12,16 +12,16 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
   s.source       		= { :git => "https://github.com/sailingX/Chameleon.git", 
                      		:tag => s.version.to_s }
-  s.swift_versions = ['5.0']
-  s.public_header_files = 'Pod/Classes/Objective-C/**/*.h'
   s.frameworks   = 'UIKit', 'QuartzCore', 'CoreGraphics'
 
   s.default_subspecs = 'Default'
 
   s.subspec 'Default' do |ss|
     ss.source_files = 'Pod/Classes/Objective-C/**/*.{h,m}'
+    ss.public_header_files = 'Pod/Classes/Objective-C/**/*.h'
   end
 
+  s.swift_versions = ['5.0']
   s.subspec 'Swift' do |ss|
       ss.ios.deployment_target = '8.0'
       ss.source_files = 'Pod/Classes/Swift/ChameleonShorthand.swift'
