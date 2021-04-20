@@ -938,12 +938,13 @@
         case kCGColorSpaceModelIndexed:
         case kCGColorSpaceModelLab:
         case kCGColorSpaceModelPattern:
+        case kCGColorSpaceModelXYZ:
         case kCGColorSpaceModelUnknown: {
-            
+
             #ifdef DEBUG
             NSLog(@"Unsupported color model: %i", model);
             #endif
-            
+
             rgba[0] = 0.0f;
             rgba[1] = 0.0f;
             rgba[2] = 0.0f;

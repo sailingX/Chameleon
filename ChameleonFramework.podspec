@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
   s.source       		= { :git => "https://github.com/sailingX/Chameleon.git", 
                      		:tag => s.version.to_s }
-
+  s.swift_versions = ['5.0']
   s.public_header_files = 'Pod/Classes/Objective-C/**/*.h'
   s.frameworks   = 'UIKit', 'QuartzCore', 'CoreGraphics'
 
